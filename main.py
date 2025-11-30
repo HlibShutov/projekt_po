@@ -1,10 +1,16 @@
 from ExecutionTimesBaseStatistics import ExecutionTimesBaseStatistics
 from StatisicsLogger import StatisticsLogger
 from WithMeanStatisticsLogger import WithMeanStatisticsLogger
+from WithSummaryStatisticsLogger import WithSummaryStatisticsLogger
 
 execution_times = [1.0, 1.5, 2.0]
 execution_times_base_statistics: StatisticsLogger = ExecutionTimesBaseStatistics(execution_times)
 execution_times_base_statistics.display_statistics()
+print()
 
 execution_times_base_statistics_with_mean: StatisticsLogger = WithMeanStatisticsLogger(ExecutionTimesBaseStatistics(execution_times))
 execution_times_base_statistics_with_mean.display_statistics()
+print()
+
+execution_times_base_statistics_summary: StatisticsLogger = WithSummaryStatisticsLogger(ExecutionTimesBaseStatistics(execution_times))
+execution_times_base_statistics_summary.display_statistics()
