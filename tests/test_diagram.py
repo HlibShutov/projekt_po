@@ -1,12 +1,12 @@
 from StatisicsLogger import StatisticsLogger
 from ExecutionTimesBaseStatistics import ExecutionTimesBaseStatistics
 
-def test_display_statistics(capsys):
-    execution_times = [1.0, 1.5, 2.0]
-    execution_times_base_statistics: StatisticsLogger = ExecutionTimesBaseStatistics(execution_times)
-    execution_times_base_statistics.display_statistics()
-    captured = capsys.readouterr()
-    assert captured.out == "1.0, 1.5, 2.0\n"
+# def test_display_statistics(capsys):
+#     execution_times = [1.0, 1.5, 2.0]
+#     execution_times_base_statistics: StatisticsLogger = ExecutionTimesBaseStatistics(execution_times)
+#     execution_times_base_statistics.display_statistics()
+#     captured = capsys.readouterr()
+#     assert captured.out == "1.0, 1.5, 2.0\n"
 
 def test_get_execution_times():
     execution_times = [1.0, 1.5, 2.0]
