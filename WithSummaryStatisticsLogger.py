@@ -10,7 +10,7 @@ class WithSummaryStatisticsLogger(ExecutionTimesBaseStatistics):
         print(
             "Records count:", len(execution_times),
             "Sum:", sum(execution_times),
-            "Min:", min(execution_times),
-            "Max:", max(execution_times),
+            "Min:", 0 if len(execution_times) == 0 else min(execution_times),
+            "Max:", 0 if len(execution_times) == 0 else max(execution_times),
         )
         self.statistics_logger.display_statistics()

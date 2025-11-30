@@ -3,7 +3,7 @@ from StatisicsLogger import StatisticsLogger
 from WithMeanStatisticsLogger import WithMeanStatisticsLogger
 from WithSummaryStatisticsLogger import WithSummaryStatisticsLogger
 
-execution_times = [1.0, 1.5, 2.0]
+execution_times = []
 execution_times_base_statistics: StatisticsLogger = ExecutionTimesBaseStatistics(execution_times)
 execution_times_base_statistics.display_statistics()
 print()
