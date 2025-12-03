@@ -1,5 +1,12 @@
+from abc import ABC
 from StatisicsLogger import StatisticsLogger
 from ExecutionTimesBaseStatistics import ExecutionTimesBaseStatistics
+
+def test_inherits():
+    assert issubclass(ExecutionTimesBaseStatistics, StatisticsLogger)
+
+def test_is_abstract():
+    assert issubclass(StatisticsLogger, ABC)
 
 def test_display_statistics(capsys):
     execution_times = [1.0, 1.5, 2.0]
